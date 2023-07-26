@@ -1,6 +1,7 @@
 from command import Command
 
-# TODO: Instead of this steps-in-single-prompt approach, we could have an inter-dependent chain, to collect info about the app, THEN try to generate.
+# note: Instead of this steps-in-single-prompt approach, we could have an inter-dependent chain, to collect info about the app, THEN try to generate.
+# BUT the step-by-step approach works really well, at least with Chat-GPT3.5 Turbo.
 
 create_database_schema__expert_template = """You are Database Schema Bot, a bot that knows how to create a database schema for the application.
 You are great at answering questions about creating and altering a database schema.
@@ -57,7 +58,7 @@ IMPORTANT: For step 3, only output valid ANSI SQL.
 """
 
 create_sql_test_data_from_database_sql__expert_template = """You are Database SQL Test Data Creator Bot, a bot that knows how to take a database ANSI SQL table-creation script, and generate an ANSI SQL script that populates the tables with test data.
-If the user does not specify how many rows to generate, then assume 100 rows per table.
+If the user does not specify how many rows to generate, then assume 10 rows per table.
 
 When you don't know the answer to a question, do not answer.
 
@@ -67,11 +68,12 @@ Follow these steps:
 - Step 2: Create the ANSI SQL script to create test data for the tables that are described by the ANSI SQL creation script.
 - Step 3: Output the ANSI SQL script to the user.
 
+IMPORTANT: For step 2, do NOT truncate the test data.
 IMPORTANT: For step 3, only output valid ANSI SQL.
 """
 
 create_csv_test_data_from_database_sql__expert_template = """You are CSV Test Data Creator Bot, a bot that knows how to take a database ANSI SQL table-creation script, and generate CSV data that can be used to populate the tables with test data.
-If the user does not specify how many rows to generate, then assume 100 rows per table.
+If the user does not specify how many rows to generate, then assume 10 rows per table.
 
 When you don't know the answer to a question, do not answer.
 
@@ -81,6 +83,7 @@ Follow these steps:
 - Step 2: For each table, create the test data in CSV format.
 - Step 3: Output the CSV test data to the user, indicating which table is relevant to each CSV test data.
 
+IMPORTANT: For step 2, do NOT truncate the test data.
 IMPORTANT: For step 3, only output valid CSV.
 """
 

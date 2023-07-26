@@ -29,11 +29,13 @@ def send_prompt(prompt, show_input = True, show_output = True, temperature = 0):
 
 def send_prompt_messages(messages, temperature = 0):
     last_message = messages[-1:]
-    print("=== LAST MESSAGE ===")
-    print(last_message)
+    if config.is_debug:
+        print("=== LAST MESSAGE ===")
+        print(last_message)
     rsp = get_completion(prompt=None, temperature=temperature, messages=messages)
-    print("=== RESPONSE ===")
-    print(rsp)
+    if config.is_debug:
+        print("=== RESPONSE ===")
+        print(rsp)
     return rsp
 
 def next_prompt(prompt):

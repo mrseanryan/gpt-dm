@@ -20,6 +20,7 @@ def execute_prompt(user_prompt, previous_messages, command_messages):
     messages = command_messages + previous_messages + [user_message]
 
     rsp = service_chat.send_prompt_messages(messages)
+
     previous_messages.append(user_message)
     previous_messages.append({'role':'assistant', 'content': rsp })
     return rsp
