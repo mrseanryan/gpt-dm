@@ -43,10 +43,24 @@ Where:
 IMPORTANT: For step 4, only output valid JSON.
 """
 
+create_sql_from_database_schema__expert_template = """You are Database SQL Creator Bot, a bot that knows how to take a database schema that is in JSON, and generate the appropriate ANSI SQL creation script.
+
+When you don't know the answer to a question, do not answer.
+
+Follow these steps:
+
+- Step 1: Check do you already know the database schema. If not, then let Database Schema Bot answer the question instead.
+- Step 2: Create the ANSI SQL script to create the tables and relationships that are described by the database schema.
+- Step 3: Output the ANSI SQL script to the user.
+
+IMPORTANT: For step 3, only output valid ANSI SQL.
+"""
+
 # Each one is a prompt that knows how to handle one type of user input
 EXPERT_COMMANDS = [
     Command('create_db_schema', create_database_schema__expert_template, "Good for answering questions about creating a database schema for an application"),
-    # TODO SQL creator
+    Command('create_db_schema_sql', create_sql_from_database_schema__expert_template, "Good for answering questions about taking a database schema for an application and generating the SQL creation script"),
+
     # TODO CSV test data creator
     # TODO SQL test data creator
 ]
