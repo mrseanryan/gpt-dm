@@ -1,5 +1,5 @@
 # gpt-dm
-Data modelling via natural language using an LLM. Outputs JSON or SQL. Also generates Test data.
+Data modelling via natural language using an LLM. Outputs JSON or ANSI SQL. Also generates Test data, in ANSI SQL or CSV format.
 
 ## Design
 
@@ -37,9 +37,11 @@ Example - see [config__application_commander.py](config__application_commander.p
 
 ### Example Output
 
+```
 xxx
+```
 
-# Non-Command user prompts
+# Unrecognised user prompts
 
 User prompts that are not related to any of the known Commands, are sent directly to the LLM.
 
