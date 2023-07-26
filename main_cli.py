@@ -5,7 +5,7 @@ command_messages = core.create_command_messages(EXPERT_COMMANDS)
 previous_messages = []
 
 def output_capabilities():
-    print("Hello, I am an AI assistant. Here are my capabilities:")
+    print("Hello, I am gpt-dm, an AI assistant. Here are my capabilities:")
     for command in EXPERT_COMMANDS:
         print(f" - {command.description.replace('Good for answering questions about', '')}")
     print("")

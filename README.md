@@ -34,16 +34,10 @@ So, another application can use the web server to send in natural language promp
 
 The other application can then act on the given output.
 
-## Commands
-
-Commands with prompts are configured to suit your application.
-
-Example - see [config__application_commander.py](config__application_commander.py).
-
 ### Example Output
 
 ```
-Hello, I am an AI assistant. Here are my capabilities:
+Hello, I am gpt-dm, an AI assistant. Here are my capabilities:
  -  creating a database schema for an application
  -  taking a database schema for an application and generating the SQL creation script
  -  taking a database SQL creation script and generating a test-data SQL insertion script
