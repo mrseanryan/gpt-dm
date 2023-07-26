@@ -28,7 +28,7 @@ For the web server, you need to pass the user prompt as GET query parameter 'p'.
 
 Example:
 
-- http://localhost:8083/?p=I%20need%20a%20new%20letter
+- http://localhost:8083/?p=I%20need%20a%20make%20a%20Car%20Parts%20application
 
 So, another application can use the web server to send in natural language prompts from the user, and receive response in appropriate format (JSON or CSV or SQL).
 
