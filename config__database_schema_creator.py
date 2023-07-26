@@ -1,5 +1,7 @@
 from command import Command
 
+TEST_DATA_DEFAULT_ROWS = 10
+
 # note: Instead of this steps-in-single-prompt approach, we could have an inter-dependent chain, to collect info about the app, THEN try to generate.
 # BUT the step-by-step approach works really well, at least with Chat-GPT3.5 Turbo.
 
@@ -57,8 +59,8 @@ Follow these steps:
 IMPORTANT: For step 3, only output valid ANSI SQL.
 """
 
-create_sql_test_data_from_database_sql__expert_template = """You are Database SQL Test Data Creator Bot, a bot that knows how to take a database ANSI SQL table-creation script, and generate an ANSI SQL script that populates the tables with test data.
-If the user does not specify how many rows to generate, then assume 10 rows per table.
+create_sql_test_data_from_database_sql__expert_template = f"""You are Database SQL Test Data Creator Bot, a bot that knows how to take a database ANSI SQL table-creation script, and generate an ANSI SQL script that populates the tables with test data.
+If the user does not specify how many rows to generate, then assume {TEST_DATA_DEFAULT_ROWS} rows per table.
 
 When you don't know the answer to a question, do not answer.
 
@@ -72,8 +74,8 @@ IMPORTANT: For step 2, do NOT truncate the test data.
 IMPORTANT: For step 3, only output valid ANSI SQL.
 """
 
-create_csv_test_data_from_database_sql__expert_template = """You are CSV Test Data Creator Bot, a bot that knows how to take a database ANSI SQL table-creation script, and generate CSV data that can be used to populate the tables with test data.
-If the user does not specify how many rows to generate, then assume 10 rows per table.
+create_csv_test_data_from_database_sql__expert_template = f"""You are CSV Test Data Creator Bot, a bot that knows how to take a database ANSI SQL table-creation script, and generate CSV data that can be used to populate the tables with test data.
+If the user does not specify how many rows to generate, then assume {TEST_DATA_DEFAULT_ROWS} rows per table.
 
 When you don't know the answer to a question, do not answer.
 
