@@ -70,7 +70,6 @@ Based on the information provided, the entities Car, Wheel, and Tyre are related
 
 Here is the database schema for the "My Car Parts" application:
 
-```json
 {
   "application": "My Car Parts",
   "entity-names": ["Car", "Wheel", "Tyre"],
@@ -88,7 +87,6 @@ Here is the database schema for the "My Car Parts" application:
     }
   }
 }
-```
 
 Please note that the entity attributes are not specified in the provided information.
 (To exit, just press ENTER) >Create some test data in SQL
@@ -97,7 +95,6 @@ Please note that the entity attributes are not specified in the provided informa
 === RESPONSE ===
 Sure! Here's an example of how you can create test data in SQL for the "My Car Parts" application:
 
-```sql
 -- Create the Car table
 CREATE TABLE Car (
   id INT PRIMARY KEY,
@@ -143,7 +140,6 @@ INSERT INTO Tyre (id, wheel_id, name) VALUES
   (4, 4, 'Tyre 4'),
   (5, 5, 'Tyre 5'),
   (6, 6, 'Tyre 6');
-```
 
 This script creates the necessary tables (Car, Wheel, Tyre) and inserts test data into them. You can modify the test data as needed.
 (To exit, just press ENTER) >Add suitable attributes to the entities
@@ -152,7 +148,6 @@ This script creates the necessary tables (Car, Wheel, Tyre) and inserts test dat
 === RESPONSE ===
 Certainly! Here's an updated version of the SQL script with suitable attributes added to the entities:
 
-```sql
 -- Create the Car table
 CREATE TABLE Car (
   id INT PRIMARY KEY,
@@ -213,7 +208,6 @@ INSERT INTO Tyre (id, wheel_id, brand, size) VALUES
   (10, 10, 'Goodyear', '235/50R18'),
   (11, 11, 'Goodyear', '235/50R18'),
   (12, 12, 'Goodyear', '235/50R18');
-```
 
 In this updated script, I added suitable attributes to each entity (Car, Wheel, Tyre) such as brand, model, year for Car, position for Wheel, and brand, size for Tyre. You can modify the attributes and test data as needed.
 (To exit, just press ENTER) >Create the test data in CSV
@@ -223,15 +217,12 @@ In this updated script, I added suitable attributes to each entity (Car, Wheel, 
 Certainly! Here's an example of how you can create test data in CSV format for the "My Car Parts" application:
 
 Car.csv:
-```
 id,brand,model,year
 1,Toyota,Corolla,2020
 2,Honda,Civic,2019
 3,Ford,Mustang,2021
-```
 
 Wheel.csv:
-```
 id,car_id,position
 1,1,Front Left
 2,1,Front Right
@@ -245,10 +236,8 @@ id,car_id,position
 10,3,Front Right
 11,3,Rear Left
 12,3,Rear Right
-```
 
 Tyre.csv:
-```
 id,wheel_id,brand,size
 1,1,Michelin,205/55R16
 2,2,Michelin,205/55R16
@@ -262,7 +251,6 @@ id,wheel_id,brand,size
 10,10,Goodyear,235/50R18
 11,11,Goodyear,235/50R18
 12,12,Goodyear,235/50R18
-```
 
 You can save each of these CSV files with their respective names and use them to populate the tables in your database.
 (To exit, just press ENTER) >Create the schema in JSON
@@ -271,7 +259,6 @@ You can save each of these CSV files with their respective names and use them to
 === RESPONSE ===
 Here is the database schema in JSON format for the "My Car Parts" application:
 
-```json
 {
   "application": "My Car Parts",
   "entity-names": ["Car", "Wheel", "Tyre"],
@@ -289,7 +276,6 @@ Here is the database schema in JSON format for the "My Car Parts" application:
     }
   }
 }
-```
 
 In this schema, each entity (Car, Wheel, Tyre) is defined with its corresponding attributes. The entity relationships are also specified, indicating that a Car has a one-to-many relationship with Wheel, and Wheel has a one-to-one relationship with Tyre.
 ```
