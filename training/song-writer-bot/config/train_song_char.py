@@ -32,5 +32,5 @@ beta2 = 0.99 # make a bit bigger because number of tokens per iter is small
 warmup_iters = 100 # not super necessary potentially
 
 # on macbook also add
-# device = 'cpu'  # run on cpu only. 'mps' is Apple Metal which might be faster
+# device = 'cpu'  # run on cpu only. 'mps' is Apple Metal which might be faster - but could only decode on infer via 'cpu' - see https://github.com/pytorch/pytorch/issues/92752
 # compile = False # do not torch compile the model
