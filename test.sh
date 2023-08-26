@@ -1,1 +1,1 @@
-python3 -W "ignore" test.py
+python -W "ignore" test.py
