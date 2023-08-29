@@ -7,12 +7,12 @@ ML approach:
 1. Create a small test dataset in CSV format, via Chat-GPT3.5 Turbo (why: power + speed + low effort)
 2. Train a new LLM via nanoGPT (reserve 10% for test, 10% for cross-validation)
 3. Human test
-4. Repeat, with a large est dataset
+4. Repeat, with a large test dataset
 
 ### Test data format:
 
 Description, Table (name), JSON
 
-## Steps to train
+## Training
 
-See [song-writer-bot](../song-writer-bot/README.md) example.
+See [README](training/README.md)

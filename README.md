@@ -317,3 +317,7 @@ source ~/.zprofile
 or
 
 `python test.py`
+
+## Training (still WIP)
+
+See [Training README](training/db-schema-bot/README.md) about training a custom LLM for gpt-dm.

@@ -11,4 +11,4 @@ Initially less - say 10,000 rows.
 
 ## Reference
 
-[gpt-summarizer via Chat-GPT](../../../README.md)
+[gpt-dm via Chat-GPT](../../../README.md)
