@@ -316,4 +316,4 @@ source ~/.zprofile
 
 or
 
-`python3 test.py`
+`python test.py`

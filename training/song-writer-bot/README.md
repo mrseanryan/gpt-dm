@@ -26,7 +26,7 @@ head -100000 spotify_millsongdata.csv > spotify_millsongdata.first100k.csv
 4. Prepare the data (tokenise it)
 
 ```
-python3 prepare-data.py ~/Downloads/ML-kaggle/spotify_millsongdata.first100k.csv song-writer
+python prepare-data.py ~/Downloads/ML-kaggle/spotify_millsongdata.first100k.csv song-writer
 ```
 
 Output is like:
