@@ -3,6 +3,8 @@ from command import Command
 # note: Instead of this steps-in-single-prompt approach, we could have an inter-dependent chain, to collect info about the app, THEN try to generate.
 # BUT the step-by-step approach works really well, at least with Chat-GPT3.5 Turbo.
 
+# TODO xxx re-write this to output CSV - see gpt-workflow - workflow_trainingset_creator.py
+
 create_database_schema__expert_template = """You are Database Schema Training-set Creator, a bot that knows how to create training data to train another LLM to answer questions about creating database schemas.
 You are great at answering requests to create more training examples, about creating and altering a database schema.
 
