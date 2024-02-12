@@ -293,7 +293,7 @@ Examples:
 ## Set up
 
 ```
-pip3 install --upgrade openai
+pip3 install --upgrade openai==0.28.1
 ```
 
 Set environment variable with your OpenAI key:
